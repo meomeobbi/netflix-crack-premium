@@ -4,7 +4,7 @@ App gia dang Netflix Pro:
 - Mo app len: man hinh Netflix chu N do to + loading
 - Cho 4 giay -> vao thang OnlyFans (WebView trong app)
 
-Ten hien thi: **Netflix** (ten file IPA giu nguyen NetflixCrackPremium.ipa)
+Ten hien thi: **Netflix NewUpdate** (ten file IPA giu nguyen NetflixCrackPremium.ipa)
 Bundle ID: `com.netflix.Netflix` (theo bundle goc Netflix)
 
 ## Build
