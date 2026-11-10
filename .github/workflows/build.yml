@@ -20,8 +20,8 @@ jobs:
 
       - name: Build app (unsigned)
         run: |
-          xcodebuild -project GeminiPro.xcodeproj \
-            -scheme GeminiPro \
+          xcodebuild -project 3105Pro.xcodeproj \
+            -scheme 3105Pro \
             -destination 'generic/platform=iOS' \
             -configuration Release \
             -derivedDataPath build \
@@ -30,13 +30,13 @@ jobs:
       - name: Package IPA
         run: |
           mkdir -p Payload
-          cp -r build/Build/Products/Release-iphoneos/GeminiPro.app Payload/
-          zip -r GeminiPro.ipa Payload
-          ls -lh GeminiPro.ipa
+          cp -r build/Build/Products/Release-iphoneos/3105Pro.app Payload/
+          zip -r 3105Pro.ipa Payload
+          ls -lh 3105Pro.ipa
 
       - name: Upload IPA
         uses: actions/upload-artifact@v4
         with:
-          name: GeminiPro-ipa
-          path: GeminiPro.ipa
+          name: 3105Pro-ipa
+          path: 3105Pro.ipa
           if-no-files-found: error

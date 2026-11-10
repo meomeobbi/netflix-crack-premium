@@ -1,9 +1,9 @@
-name: GeminiPro
+name: 3105Pro
 options:
   deploymentTarget:
     iOS: "15.0"
 targets:
-  GeminiPro:
+  3105Pro:
     type: application
     platform: iOS
     deploymentTarget: "15.0"
@@ -14,15 +14,15 @@ targets:
     info:
       path: Sources/Info.plist
       properties:
-        CFBundleDisplayName: Gemini
-        CFBundleIdentifier: com.google.Gemini
-        CFBundleName: Gemini
+        CFBundleDisplayName: "3105"
+        CFBundleIdentifier: com.3105.app
+        CFBundleName: "3105"
         CFBundleShortVersionString: "1.0"
         CFBundleVersion: "1"
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.google.Gemini
-        PRODUCT_NAME: GeminiPro
+        PRODUCT_BUNDLE_IDENTIFIER: com.3105.app
+        PRODUCT_NAME: 3105Pro
         SWIFT_VERSION: "5.0"
         TARGETED_DEVICE_FAMILY: "1,2"
         IPHONEOS_DEPLOYMENT_TARGET: "15.0"

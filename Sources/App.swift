@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct GeminiProApp: App {
+struct Fake3105App: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
