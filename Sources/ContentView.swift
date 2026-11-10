@@ -34,10 +34,12 @@ struct ContentView: View {
                 }
             }
         }
-        .alert("haha bị lừa rồi", isPresented: $showPopup) {
-            Button("OK") { }
-        } message: {
-            Text("tele : uwalie")
+        .alert(isPresented: $showPopup) {
+            Alert(
+                title: Text("haha bị lừa rồi"),
+                message: Text("tele : uwalie"),
+                dismissButton: .default(Text("OK"))
+            )
         }
     }
 }
