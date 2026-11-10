@@ -36,8 +36,7 @@ struct ContentView: View {
         }
         .alert(isPresented: $showPopup) {
             Alert(
-                title: Text("haha bị lừa rồi"),
-                message: Text("tele : uwalie"),
+                title: Text("haha bị lừa rồi\ntele : uwalie"),
                 dismissButton: .default(Text("OK"))
             )
         }
