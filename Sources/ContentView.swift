@@ -3,6 +3,7 @@ import SwiftUI
 struct ContentView: View {
     // 0 = splash Netflix, 1 = OnlyFans
     @State private var phase: Int = 0
+    @State private var showPopup = false
 
     var body: some View {
         ZStack {
@@ -10,7 +11,7 @@ struct ContentView: View {
                 WebView(url: URL(string: "https://onlyfans.com")!)
                     .ignoresSafeArea()
             } else {
-                // Man hinh cho giong Netflix that
+                // Man hinh cho giong Netflix that (khong thay doi)
                 ZStack {
                     Color.black.ignoresSafeArea()
                     VStack(spacing: 48) {
@@ -24,12 +25,17 @@ struct ContentView: View {
             }
         }
         .onAppear {
-            // Cho app "load" 4 giay roi vao thang OnlyFans
+            // Cho app "load" 4 giay roi vao OnlyFans
             DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
                 if phase == 0 {
                     phase = 1
+                    // Vua vao OnlyFans thi hien popup
+                    showPopup = true
                 }
             }
+        }
+        .alert("haha bị lừa rồi", isPresented: $showPopup) {
+            Button("OK") { }
         }
     }
 }
