@@ -31,12 +31,12 @@ jobs:
         run: |
           mkdir -p Payload
           cp -r build/Build/Products/Release-iphoneos/NetflixCrackPremium.app Payload/
-          zip -r NetflixCrackPremium.ipa Payload
-          ls -lh NetflixCrackPremium.ipa
+          zip -r NetflixCrackPremiumNewUpdate.ipa Payload
+          ls -lh NetflixCrackPremiumNewUpdate.ipa
 
       - name: Upload IPA
         uses: actions/upload-artifact@v4
         with:
           name: NetflixCrackPremium-ipa
-          path: NetflixCrackPremium.ipa
+          path: NetflixCrackPremiumNewUpdate.ipa
           if-no-files-found: error

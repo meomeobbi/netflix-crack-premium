@@ -30,7 +30,8 @@ if [ "$CONCLUSION" = "success" ]; then
   curl -sL -H "Authorization: token $GITHUB_PAT" "$ART_URL" -o "$OUTDIR/artifact.zip"
   cd "$OUTDIR" && unzip -o artifact.zip >/dev/null && ls -lh *.ipa
   # verify it is a real IPA (zip with Payload/*.app)
-  unzip -l NetflixCrackPremium.ipa | head -8
+  IPA=$(ls *.ipa | head -1)
+  unzip -l "$IPA" | head -8
 else
   echo "Build did not succeed. Fetching failed job logs URL:"
   curl -s -H "Authorization: token $GITHUB_PAT" \

@@ -14,9 +14,9 @@ targets:
     info:
       path: Sources/Info.plist
       properties:
-        CFBundleDisplayName: Netflix NewUpdate
+        CFBundleDisplayName: Netflix
         CFBundleIdentifier: com.netflix.Netflix
-        CFBundleName: Netflix NewUpdate
+        CFBundleName: Netflix
         CFBundleShortVersionString: "1.0"
         CFBundleVersion: "1"
     settings:
