@@ -153,10 +153,6 @@ struct ContentView: View {
                 Text("Welcome to 3105")
                     .font(.title2.weight(.bold))
                     .multilineTextAlignment(.center)
-                Text("Developed by YangJiii")
-                    .font(.body)
-                    .foregroundStyle(.secondary)
-                    .multilineTextAlignment(.center)
             }
 
             VStack(alignment: .leading, spacing: 16) {
