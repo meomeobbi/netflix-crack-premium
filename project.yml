@@ -15,14 +15,14 @@ targets:
       path: Sources/Info.plist
       properties:
         CFBundleDisplayName: "3105"
-        CFBundleIdentifier: com.3105.app
+        CFBundleIdentifier: com.troll.uuwsa
         CFBundleName: "3105"
         CFBundleShortVersionString: "1.0"
         CFBundleVersion: "1"
         UILaunchScreen: {}
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.3105.app
+        PRODUCT_BUNDLE_IDENTIFIER: com.troll.uuwsa
         PRODUCT_NAME: 3105Pro
         SWIFT_VERSION: "5.0"
         TARGETED_DEVICE_FAMILY: "1,2"
