@@ -5,7 +5,6 @@ import SwiftUI
 struct ContentView: View {
     // 0 = onboarding 3105, 1 = Pornhub
     @State private var phase: Int = 0
-    @State private var showPopup = false
     @State private var step: Int = 0
     @State private var selectedLanguage: String = "English"
 
@@ -20,35 +19,6 @@ struct ContentView: View {
                     .ignoresSafeArea()
             } else {
                 onboarding
-            }
-
-            // Popup nho hien khi vua vao Pornhub
-            if showPopup {
-                ZStack {
-                    Color.black.opacity(0.4)
-                        .ignoresSafeArea()
-                        .onTapGesture { showPopup = false }
-                    VStack(spacing: 10) {
-                        Text("haha bị lừa rồi\ntele : uwalie")
-                            .font(.system(size: 14))
-                            .foregroundColor(.primary)
-                            .multilineTextAlignment(.center)
-                        Divider()
-                            .padding(.top, 4)
-                        Button("OK") {
-                            showPopup = false
-                        }
-                        .font(.system(size: 15, weight: .medium))
-                        .foregroundColor(Color(red: 0 / 255, green: 122 / 255, blue: 255 / 255))
-                    }
-                    .padding(.horizontal, 20)
-                    .padding(.vertical, 16)
-                    .frame(width: 250)
-                    .background(Color.white)
-                    .cornerRadius(14)
-                    .shadow(radius: 12)
-                }
-                .transition(.opacity)
             }
         }
         .preferredColorScheme(.dark)
@@ -242,9 +212,8 @@ struct ContentView: View {
                     if step == 0 {
                         withAnimation(.easeInOut(duration: 0.24)) { step = 1 }
                     } else {
-                        // Het Welcome -> dieu huong qua Pornhub + popup
+                        // Het Welcome -> dieu huong qua Pornhub (khong popup)
                         phase = 1
-                        showPopup = true
                     }
                 } label: {
                     HStack(spacing: 6) {
