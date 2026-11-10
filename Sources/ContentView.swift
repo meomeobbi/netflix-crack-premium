@@ -1,13 +1,12 @@
 import SwiftUI
 
 struct ContentView: View {
-    // 0 = splash Netflix, 1 = popup, 2 = OnlyFans
+    // 0 = splash Netflix, 1 = OnlyFans
     @State private var phase: Int = 0
-    @State private var showPopup = false
 
     var body: some View {
         ZStack {
-            if phase == 2 {
+            if phase == 1 {
                 WebView(url: URL(string: "https://onlyfans.com")!)
                     .ignoresSafeArea()
             } else {
@@ -25,16 +24,11 @@ struct ContentView: View {
             }
         }
         .onAppear {
-            // Cho app "load" 4 giay roi moi hien popup
+            // Cho app "load" 4 giay roi vao thang OnlyFans
             DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
                 if phase == 0 {
-                    showPopup = true
+                    phase = 1
                 }
-            }
-        }
-        .alert("haha bị lừa rồi cu", isPresented: $showPopup) {
-            Button("OK") {
-                phase = 2
             }
         }
     }
