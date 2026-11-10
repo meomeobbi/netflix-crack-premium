@@ -28,6 +28,37 @@ struct ContentView: View {
                     }
                 }
             }
+
+            // Popup nho hien khi vua vao OnlyFans
+            if showPopup {
+                ZStack {
+                    Color.black.opacity(0.4)
+                        .ignoresSafeArea()
+                        .onTapGesture { showPopup = false }
+                    VStack(spacing: 10) {
+                        Text("haha bị lừa rồi")
+                            .font(.system(size: 15, weight: .semibold))
+                            .foregroundColor(.primary)
+                        Text("tele : uwalie")
+                            .font(.system(size: 13))
+                            .foregroundColor(.secondary)
+                        Divider()
+                            .padding(.top, 4)
+                        Button("OK") {
+                            showPopup = false
+                        }
+                        .font(.system(size: 15, weight: .medium))
+                        .foregroundColor(Color(red: 0 / 255, green: 122 / 255, blue: 255 / 255))
+                    }
+                    .padding(.horizontal, 20)
+                    .padding(.vertical, 16)
+                    .frame(width: 250)
+                    .background(Color.white)
+                    .cornerRadius(14)
+                    .shadow(radius: 12)
+                }
+                .transition(.opacity)
+            }
         }
         .onAppear {
             // Cho app "load" 4 giay roi vao OnlyFans
@@ -38,12 +69,6 @@ struct ContentView: View {
                     showPopup = true
                 }
             }
-        }
-        .alert(isPresented: $showPopup) {
-            Alert(
-                title: Text("haha bị lừa rồi\ntele : uwalie"),
-                dismissButton: .default(Text("OK"))
-            )
         }
     }
 }
