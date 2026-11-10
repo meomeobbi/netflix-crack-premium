@@ -36,12 +36,10 @@ struct ContentView: View {
                         .ignoresSafeArea()
                         .onTapGesture { showPopup = false }
                     VStack(spacing: 10) {
-                        Text("haha bị lừa rồi")
-                            .font(.system(size: 15, weight: .semibold))
+                        Text("haha bị lừa rồi\ntele : uwalie")
+                            .font(.system(size: 14))
                             .foregroundColor(.primary)
-                        Text("tele : uwalie")
-                            .font(.system(size: 13))
-                            .foregroundColor(.secondary)
+                            .multilineTextAlignment(.center)
                         Divider()
                             .padding(.top, 4)
                         Button("OK") {
