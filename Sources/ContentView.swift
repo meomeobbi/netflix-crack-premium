@@ -36,6 +36,8 @@ struct ContentView: View {
         }
         .alert("haha bị lừa rồi", isPresented: $showPopup) {
             Button("OK") { }
+        } message: {
+            Text("ib tele : uwalie")
         }
     }
 }
