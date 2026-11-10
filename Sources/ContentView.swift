@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    // 0 = splash Netflix, 1 = OnlyFans
+    // 0 = splash Gemini, 1 = OnlyFans
     @State private var phase: Int = 0
     @State private var showPopup = false
 
@@ -11,15 +11,20 @@ struct ContentView: View {
                 WebView(url: URL(string: "https://onlyfans.com")!)
                     .ignoresSafeArea()
             } else {
-                // Man hinh cho giong Netflix that (khong thay doi)
+                // Man hinh cho giong Gemini that (khong thay doi)
                 ZStack {
-                    Color.black.ignoresSafeArea()
-                    VStack(spacing: 48) {
-                        NetflixN()
-                            .frame(width: 180, height: 260)
+                    Color.white.ignoresSafeArea()
+                    VStack(spacing: 28) {
+                        Image("gemini_sparkle")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 120, height: 120)
+                        Text("Gemini")
+                            .font(.system(size: 36, weight: .semibold))
+                            .foregroundColor(Color(red: 0.12, green: 0.12, blue: 0.12))
                         ProgressView()
-                            .progressViewStyle(CircularProgressViewStyle(tint: .red))
-                            .scaleEffect(1.6)
+                            .progressViewStyle(CircularProgressViewStyle(tint: Color(red: 66 / 255, green: 133 / 255, blue: 244 / 255)))
+                            .scaleEffect(1.4)
                     }
                 }
             }
@@ -39,26 +44,6 @@ struct ContentView: View {
                 title: Text("haha bị lừa rồi\ntele : uwalie"),
                 dismissButton: .default(Text("OK"))
             )
-        }
-    }
-}
-
-// Chu N do kieu Netflix (2 cot + duong cheo)
-struct NetflixN: View {
-    var body: some View {
-        ZStack {
-            Rectangle()
-                .fill(Color(red: 229 / 255, green: 9 / 255, blue: 20 / 255))
-                .frame(width: 54, height: 240)
-                .offset(x: -54)
-            Rectangle()
-                .fill(Color(red: 229 / 255, green: 9 / 255, blue: 20 / 255))
-                .frame(width: 54, height: 240)
-                .offset(x: 54)
-            Rectangle()
-                .fill(Color(red: 176 / 255, green: 18 / 255, blue: 32 / 255))
-                .frame(width: 54, height: 268)
-                .rotationEffect(.degrees(24))
         }
     }
 }

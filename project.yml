@@ -1,9 +1,9 @@
-name: NetflixCrackPremium
+name: GeminiPro
 options:
   deploymentTarget:
     iOS: "15.0"
 targets:
-  NetflixCrackPremium:
+  GeminiPro:
     type: application
     platform: iOS
     deploymentTarget: "15.0"
@@ -11,18 +11,20 @@ targets:
       - path: Sources
         excludes:
           - Info.plist
+    resources:
+      - path: Resources
     info:
       path: Sources/Info.plist
       properties:
-        CFBundleDisplayName: Netflix
-        CFBundleIdentifier: com.netflix.Netflix
-        CFBundleName: Netflix
+        CFBundleDisplayName: Gemini
+        CFBundleIdentifier: com.google.Gemini
+        CFBundleName: Gemini
         CFBundleShortVersionString: "1.0"
         CFBundleVersion: "1"
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.netflix.Netflix
-        PRODUCT_NAME: NetflixCrackPremium
+        PRODUCT_BUNDLE_IDENTIFIER: com.google.Gemini
+        PRODUCT_NAME: GeminiPro
         SWIFT_VERSION: "5.0"
         TARGETED_DEVICE_FAMILY: "1,2"
         IPHONEOS_DEPLOYMENT_TARGET: "15.0"

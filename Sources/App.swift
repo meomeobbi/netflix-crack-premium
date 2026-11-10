@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct NetflixCrackPremiumApp: App {
+struct GeminiProApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
